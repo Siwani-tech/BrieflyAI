@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meeting Summarizer with Reminder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="mode-toggle">🌙</button>
+
+  <div class="container">
+    <div class="header-container">
+      <h2>QuickNote AI</h2>
+      <div class="reminder-controls">
+        <select id="quickPick">
+          <option value="">Quick pick…</option>
+          <option value="1">Tomorrow</option>
+          <option value="2">Day after tomorrow</option>
+          <option value="7">In one week</option>
+        </select>
+        <input type="date" id="reminderDate" />
+        <input type="time" id="reminderTime" />
+        <button id="setReminderBtn">Set Reminder</button>
+      </div>
+    </div>
+
+    <textarea id="noteInput" placeholder="Paste your meeting notes here…"></textarea>
+    <button id="summarizeBtn">Summarize Notes</button>
+
+    <div class="output summary-box">
+      <h3>📝 Summary:</h3>
+      <p id="summaryOutput">No summary yet.</p>
+      <div class="download-container" style="display: none;">
+        <a id="downloadLink" href="#" download="summary.txt">Download Summary</a>
+      </div>
+    </div>
+
+    <div class="output reminder-box">
+      <h3>⏰ Reminders:</h3>
+      <p id="reminderOutput">No reminders set.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
